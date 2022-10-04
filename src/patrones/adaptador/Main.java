@@ -22,7 +22,7 @@ public class Main {
 
         int entero2 = entero;
 
-        // Cosas a tener en cuenta
+        // cosasMalas.Cosas a tener en cuenta
 
         Boolean bul = null;
         boolean bul2 = false; // true - false
