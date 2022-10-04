@@ -24,7 +24,7 @@ public class Main {
 
         // Constructor privado
         // PatronSingle3.instance = new PatronSingle3();
-        PatronSingle3.instance = new PatronSingle3();
+        //PatronSingle3.instance = new PatronSingle3();
 
 
     }
