@@ -26,8 +26,14 @@ public class MainMinMax {
             if (valor > max) max = valor;
         }
 
+        min = values.stream().min(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1.compareTo(o2);
+            }
+        }).get();
 
-        Integer mivValor = values.stream().min(new Comparator<Integer>() {
+        max = values.stream().max(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
                 return o1.compareTo(o2);

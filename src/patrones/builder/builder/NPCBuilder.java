@@ -48,4 +48,8 @@ public class NPCBuilder {
     public NPC build() {
         return this.npc;
     }
+
+    public NPCBuilder clean(){
+        this.npc = new NPC();
+    }
 }

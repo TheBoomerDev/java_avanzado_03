@@ -1,6 +1,8 @@
 package patrones.builder.builder;
 
-public class NPC {
+import java.util.Comparator;
+
+public class NPC implements Comparable, Comparator {
 
     private int id = 0;
     private String name = "";
@@ -81,5 +83,18 @@ public class NPC {
 
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        int id = ((NPC)o).id;
+        return (this.id > id) ? -1 : 1;
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        int id1 = ((NPC)o1).id;
+        int id2 = ((NPC)o2).id;
+        return (id1 > id2) ? -1 : 1;
     }
 }
