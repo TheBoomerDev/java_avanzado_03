@@ -4,6 +4,9 @@ import java.util.Date;
 
 public class PersonaDB {
 
+    protected PersonaDB(){}
+
+
     private long id = 0;
     private String name = "";
 

@@ -19,6 +19,8 @@ public class Main2 {
         PersonaDB perDb = per.toDB();
         // Transformamos en el otro tipo que necesitamos
 
+        // Solo desde la misma caperta
+        //perDb = new PersonaDB();
     }
 
 }
