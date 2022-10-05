@@ -7,6 +7,10 @@ public class NPCBuilder {
         this.npc = new NPC();
     }
 
+    public NPC getNewOne(){
+        return new NPC();
+    }
+
     public NPCBuilder setName(String name){
         this.npc.setName(name);
         return this;
@@ -51,5 +55,6 @@ public class NPCBuilder {
 
     public NPCBuilder clean(){
         this.npc = new NPC();
+        return this;
     }
 }

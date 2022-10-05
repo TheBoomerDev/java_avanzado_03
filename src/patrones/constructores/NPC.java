@@ -14,6 +14,8 @@ public class NPC {
 
     private int experiencia;
 
+    // Sobreescritura de metodos
+
     public NPC (int id, String name, int vida, int destreza, int fuerza, int constitucion, int nivel, int experiencia){
         this.id = id;
         this.name = name;
@@ -21,15 +23,15 @@ public class NPC {
     }
 
     public NPC (String name, int destreza, int fuerza, int consitucion){
-        return new NPC(1, name, 100, destreza, fuerza, consitucion, 1, 100);
+        new NPC(1, name, 100, destreza, fuerza, consitucion, 1, 100);
     }
 
     public NPC (String name){
-        return new NPC(name, 100, 100, 100);
+        new NPC(name, 100, 100, 100);
     }
 
     public NPC (){
-        return new NPC("ORCO");
+        new NPC("ORCO");
     }
 
 
