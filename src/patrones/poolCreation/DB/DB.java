@@ -1,15 +1,12 @@
-package patrones.cache.dataSource;
+package patrones.poolCreation.DB;
 
 import patrones.cache.dataSource.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class DB {
 
-    private DB(){}
-    public static final DB instance = new DB();
 
     private List<User> usuarios = new ArrayList<User>();
 

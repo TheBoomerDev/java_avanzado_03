@@ -1,7 +1,6 @@
 package patrones.cache.dataSource;
 
 import patrones.cache.dataSource.models.User;
-import patrones.cache.dataSource.DB;
 
 public class DbWorker {
 
@@ -20,12 +19,12 @@ public class DbWorker {
 
                 System.out.println("Creamos User");
 
-                User user =User.getRandom();
+                User user = User.getRandom();
 
                 DB.instance.addUser(user);
 
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
