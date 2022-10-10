@@ -5,19 +5,26 @@ public class LogSystem {
     private Tipo level = Tipo.INFO;
 
     public enum Tipo{
-        INFO(0),
-        DEBUG(1),
-        WARN(2),
-        ERROR(3);
+        INFO(0, 'I'),
+        DEBUG(1, 'D'),
+        WARN(2, 'W'),
+        ERROR(3, 'E'),
+        WTF(4, 'T');
 
         private final int prioridad;
-        Tipo(int i) {
+        private final char letter;
+        Tipo(int i, char letter) {
+            this.letter = letter;
             this.prioridad = i;
         }
     }
 
     private LogSystem(){}
     public static final LogSystem init = new LogSystem();
+
+    public static LogSystem getLogger(){
+        return init;
+    }
 
     public void setLevel(Tipo tipo){
         this.level = tipo;
@@ -44,8 +51,10 @@ public class LogSystem {
         int limite = level.prioridad;
         if (limite > prioridad) return;
 
-        String format = "%s => %s";
-        String txt = String.format(format, tag, msg);
+        String format = "%s: (T:%s) => \r\n %s";
+        char letter = tipo.letter;
+
+        String txt = String.format(format, letter, tag, msg);
         System.out.println(txt);
     }
 }
