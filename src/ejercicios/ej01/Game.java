@@ -75,5 +75,9 @@ public class Game {
         Jugador ganador = (ganadas01 > ganadas02) ? pj01 : pj02;
         String msg = String.format(format, ganadas01, ganadas02, ganador);
         LogSystem.getLogger().info("PARTIDAS", msg);
+
+        Integer entero = null;
+        int entero01 = entero;
+
     }
 }
