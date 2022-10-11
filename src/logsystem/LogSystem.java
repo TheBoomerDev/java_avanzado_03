@@ -45,6 +45,17 @@ public class LogSystem {
         print(Tipo.ERROR, tag, msg);
     }
 
+    public void error(String tag, Exception e){
+
+        String message = e.getLocalizedMessage();
+        String cause = e.getCause().getLocalizedMessage();
+        String format = "ERROR: %s \r\n -> %s";
+        String msg = String.format(format, cause, message);
+        error(tag, msg);
+
+        e.printStackTrace();
+    }
+
     private void print(Tipo tipo, String tag, String msg){
 
         int prioridad = tipo.prioridad;
